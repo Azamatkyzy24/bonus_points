@@ -1,4 +1,4 @@
-// B центр тяжести 
+// центр тяжести 
 #include <iostream>
 #include <iomanip> 
 using namespace std;
