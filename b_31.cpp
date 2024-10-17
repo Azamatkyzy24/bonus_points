@@ -1,3 +1,4 @@
+// количество нулей
 #include <iostream>
 using namespace std;
 int main(){
