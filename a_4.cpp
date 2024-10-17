@@ -1,31 +1,23 @@
 // how many unique digits in number 
 #include <iostream>
-#include <algorithm> 
 using namespace std;
 
 int main() {
     int n;
     cin >> n;
 
-    int arr[n]; 
+    bool seen[10] = {false};
+    int unique_count = 0;  
 
-
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
-
-
-    sort(arr, arr + n);
-
-
-    int unique_count = 1; 
-
-    for (int i = 1; i < n; i++) {
-        if (arr[i] != arr[i - 1]) { 
-            unique_count++;
+    while (n > 0) {
+        int digit = n % 10;  
+        if (!seen[digit]) {
+            seen[digit] = true;
+            unique_count++; 
         }
+        n /= 10; 
     }
 
-    cout << unique_count; 
+    cout << unique_count << endl; 
     return 0;
 }
